@@ -24,21 +24,23 @@ function showPage(page, list) {
    const listLength = list.length;
 
    //to loop over each item and hide items not requested
-   for (let i = 0; i < listLength; i++) {
-      list[i].style.display = '';
-   } else {
-      list[i].style.display = 'none';
-   }
-
-   const startIndex = page * rowsPerPage;
-   const endIndex = startIndex + rowsPerPage;
-
-   for (let i = startIndex; i < endIndex; i++) {
-      if(students[i]) {
-         students[i].style.display = "block";
+      for (let i = 0; i < listLength; i++) {
+         if (i >= page*10-10 && i < page*10) {
+            list[i].style.display = '';
+         } else {
+            list[i].style.display = 'none';
+         }
       }
-   }
-}
+   
+//    const startIndex = page * rowsPerPage;
+//    const endIndex = startIndex + rowsPerPage;
+
+//    for (let i = startIndex; i < endIndex; i++) {
+//       if(students[i]) {
+//          students[i].style.display = "block";
+//       }
+//    }
+// }
 
 // inspired by Tania Rascia's blog: https://www.taniarascia.com/how-to-paginate-an-array-in-javascript/
 const previous = document.getElementById('previous');
