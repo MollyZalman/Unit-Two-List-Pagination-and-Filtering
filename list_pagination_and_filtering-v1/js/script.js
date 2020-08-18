@@ -15,7 +15,7 @@ const studentName = document.getElementsByTagName('h3');
 //Show only 10 students per page
 const itemsPerPage = 10;
 
-//The current page you're on 
+//The current page you're on
 const presentPage = 1;
 
 //Shows correct page of students
@@ -32,20 +32,7 @@ function showPage(page, list) {
          }
       }
    
-//    const startIndex = page * rowsPerPage;
-//    const endIndex = startIndex + rowsPerPage;
-
-//    for (let i = startIndex; i < endIndex; i++) {
-//       if(students[i]) {
-//          students[i].style.display = "block";
-//       }
-//    }
-// }
-
 // inspired by Tania Rascia's blog: https://www.taniarascia.com/how-to-paginate-an-array-in-javascript/
-const previous = document.getElementById('previous');
-const forward = document.getElementById('forward');
-
 //allows you to go back a page
 function prev (present, pages) {
    let index = pages.indexOf(present);
@@ -64,5 +51,39 @@ function next (present, pages) {
    return pages[index + 1]
 }
 
+   const startIndex = page * rowsPerPage;
+   const endIndex = startIndex + rowsPerPage;
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
+   for (let i = startIndex; i < endIndex; i++) {
+      if(students[i]) {
+         students[i].style.display = "block";
+      }
+   }
+}
+
+//appends and creates functionality for the pagination links at the bottom of the page
+function appendPageLinks(list) {
+   const divDetails = document.querySelector('.page');
+   const newDiv = document.createElement('div');
+   newDiv.className = 'pagination';
+   divDetails.appendChild(div);
+   const newUl = document.createElement('ul');
+   newDiv.appendChild(newUl);
+   const amountOfPages = Math.ceil(listLength / itemsPerPage);
+   
+   //New li button
+   //Inspired by https://www.w3schools.com/jsref/met_element_setattribute.asp
+   function newLiLink(pageNumber)
+   //SOMETHING IS WRONG HERE IN TERMS OF CONST
+   const link = document.createElement('a');
+   link.setAttribute('href', '#');
+   link.textContent = pageNumber;
+      if(pageNumber === 1){
+         link.className = 'active';
+   }
+   ul.appendChild(li);
+   ul.appendChild(a);
+   link.push(li)
+}
+
+// Remember to delete the comments that came with this file, and replace them with your own code comments
