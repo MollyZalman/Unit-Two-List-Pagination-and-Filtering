@@ -29,7 +29,6 @@ function showPage(students, page) {
             //hide students
         } or 
             items[i].style.display = 'none';
-    console.log(showPage);
     }
 
 
