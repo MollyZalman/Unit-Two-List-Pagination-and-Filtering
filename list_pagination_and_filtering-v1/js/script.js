@@ -22,29 +22,16 @@ function showPage(students, page) {
     const endIndex = page * studentsPerPage;
     //loops over each student, and hides those that aren't needed
     for(let i = 0; i < students.length; i++) {
-        if(i > startIndex && i<endIndex) {
+        if(i>startIndex && i<endIndex) {
             //show students
             items[i].style.display = '';
         }
-        //hide students
+            //hide students
         } or 
             items[i].style.display = 'none';
+    console.log(showPage);
     }
 
-/**
- * creates page buttons on the bottom of the page with click listener to change pages
- * @param studentList - All students in the ul
- */
-
-const appendPageLinks = (studentList) => {
-    const pageTotal = math.floor (studentList.length / studentsPerPage);
-    const divPage = document.querySelector('.page');
-    divPage.appendChild(div);
-    const div = document.createElement('div');
-    div.className = 'pagination';
-    const ul = document.createElement('ul');
-    div.appendChild(ul);
-}
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments
