@@ -21,14 +21,14 @@ function showPage(students, page) {
     const startIndex = (page * studentsPerPage) - studentsPerPage
     const endIndex = page * studentsPerPage;
     //loops over each student, and hides those that aren't needed
-    for(let i = 0; i < students.length; i++) {
-        if(i>startIndex && i<endIndex) {
+    for (let i = 0; i < students.length; i++) {
+        if (i>startIndex && i<endIndex) {
             //show students
-            items[i].style.display = '';
+            students[i].style.display = '';
         }
             //hide students
         } or 
-            items[i].style.display = 'none';
+            students[i].style.display = 'none';
     }
 
 
