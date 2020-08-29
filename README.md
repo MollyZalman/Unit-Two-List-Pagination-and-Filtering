@@ -1,2 +1,7 @@
 # Unit-Two-List-Pagination-and-Filtering
-A flexible pagination project to show the usability of a webpage
+
+Project #2 for the Full Stack JavaScript TechDegree:
+A basic list pagination project.
+
+Started: (07/15/20)
+Ended: (08/28/20)
