@@ -18,8 +18,9 @@ const studentsPerPage = 10;
 
 function showPage(list, page) {
      //Inspired by: https://jasonwatmore.com/post/2018/08/07/javascript-pure-pagination-logic-in-vanilla-js-typescript
-     //Start of Index = 0, end of index = 10
+     //Start of Index = 0
     let startIndex = (page * studentsPerPage) - studentsPerPage;
+    //end of index = 10
     let endIndex = (page * studentsPerPage);
     //Loops over each li listItem
     for (let i = 0; i < list.length; i++) {
@@ -41,14 +42,17 @@ function showPage(list, page) {
 function appendPageLinks(list) {
     //Set pageDiv to the class 'page'
     const pageDiv = document.querySelector('.page');
+    //Creates a new div 
     const div = document.createElement('div');
+    //Adds div as a child to pageDiv
     pageDiv.appendChild(div);
     //Adds pagination
     div.className = 'pagination'
-     //Adding new ul items 
+     //Adds new ul items 
     const ul = document.createElement('ul');
+    //Adds ul as a child to the div
     div.appendChild(ul);
-    //The results = total pages
+    //Rounding up, and calculating the pages so if there are 64 students, there will be 7 pages
     const totalPages = Math.ceil(list.length / studentsPerPage);
 
     /**
@@ -61,30 +65,36 @@ function appendPageLinks(list) {
         //New link with page number
         const link = document.createElement('a');
         link.setAttribute('href', '#');
+        //Makes the current page button start on 1
         link.textContent = currentPageNumber;
-        if (currentPageNumber == 1) {
-            link.className = 'active';
-        }
+            //If the currentPageNumber is equal to 1...
+            if (currentPageNumber == 1) {
+                //The new link is active! Hooray!
+                link.className = 'active';
+            } 
         //Inspired by: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-        //Having issues with multiple buttons high-lighting after being clicked
         link.addEventListener('click', (e) => {
+            //Makes the elements active
             const activeElements = document.getElementsByClassName('active');
-            for (let i = 1; i < activeElements.length; i++) {
+            //This one little line had me puzzled for days! Makes just one button active at a time and loops through each in light speed!
+            for (let i = 0; i < activeElements.length; i++) {
                 activeElements[i].classList.remove('active');
             }
+            //
             e.target.classList.add('active');
-            //Load page with specified items
+            //Loads page with specified items
             showPage(list, currentPageNumber);
         });
-        //Adding links to new li items 
         const li = document.createElement('li');
+        //Adding links to new li items and returns an li
         li.appendChild(link);
         return li;
     }
+    //Loops through all the new links
     for (let i = 1; i <= totalPages; i++) {
         ul.appendChild(newLiLink(i));
     }
 }
-//Calling the functions
+//Calling the showPage and appendPageLinks functions
 showPage(listItems, 1);
 appendPageLinks(listItems);
