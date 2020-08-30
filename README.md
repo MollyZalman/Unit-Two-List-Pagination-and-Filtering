@@ -1,4 +1,4 @@
-  <img src="pagination.pdf" alt="Pagination" width="160">
+  <img src="desktop/code/list_pagination_and_filtering/pagination.pdf" alt="Pagination" width="160">
 
 ## Project title
 List Pagination and Filtering
