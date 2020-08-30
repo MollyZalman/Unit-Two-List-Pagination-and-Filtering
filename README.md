@@ -1,7 +1,25 @@
-# Unit-Two-List-Pagination-and-Filtering
+  <img src="/img/code/list_pagination_and_filtering/pagination.pdf" alt="Pagination" width="160">
 
-Project #2 for the Full Stack JavaScript TechDegree:
-A basic list pagination project.
+## Project title
+List Pagination and Filtering
 
-Started: (07/15/20)
-Ended: (08/28/20)
+## Motivation
+My second project for the Team Treehouse Tech Degree in Full Stack Javascript.
+
+## Build status
+Done with basics. Going to add exceeds feature with search bar capability soon.
+
+# Start Date:
+8/15/20
+
+# End Date (non permanent):
+8/28/20
+
+## Code style
+js-standard-style
+
+## Features
+No matter how many students are added to the pagination, the webpage will sort them by 10
+
+## Credits
+Thank you to Kevin Anderson as well as the rock stars at Treehouse for helping me through my first JavaScript project.
