@@ -1,4 +1,3 @@
-  <img src=""> 
 
 ## Project title
 List Pagination and Filtering
