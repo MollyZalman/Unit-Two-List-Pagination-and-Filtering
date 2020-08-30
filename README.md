@@ -1,4 +1,4 @@
-  <img src="./pagination.pdf"> 
+  <img src="pagination.pdf"> 
 
 ## Project title
 List Pagination and Filtering
