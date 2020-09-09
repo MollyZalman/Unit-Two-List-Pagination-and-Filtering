@@ -1,6 +1,6 @@
                                                                 /*#########################################
                                                                             Treehouse Techdegree:
-                                                                FSJS project 2 - List Filter and Pagination
+                                                                FSJS Project 2 - List Filter and Pagination
                                                                 ##########################################*/
 
 //My global variables
