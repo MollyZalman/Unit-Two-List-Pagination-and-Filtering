@@ -1,5 +1,5 @@
 
-## Project title
+# Project title
 List Pagination and Filtering
 
 ## Motivation
@@ -8,10 +8,10 @@ My second project for the Team Treehouse Tech Degree in Full Stack Javascript.
 ## Build status
 Done with basics. Going to add exceeds feature with search bar capability soon.
 
-# Start Date:
+## Start Date:
 8/15/20
 
-# End Date (non permanent):
+## End Date (non permanent):
 8/28/20
 
 ## Code style
