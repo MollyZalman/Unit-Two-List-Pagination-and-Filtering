@@ -95,6 +95,8 @@ function appendPageLinks(list) {
         ul.appendChild(newLiLink(i));
     }
 }
+
+
 //Calling the showPage and appendPageLinks functions
 showPage(listItems, 1);
 appendPageLinks(listItems);
